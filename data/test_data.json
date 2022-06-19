@@ -1,0 +1,80 @@
+{
+    "feed": [
+        {
+            "id": "1",
+            "post_id": "1",
+            "title": "Odd Even Linked List problem in Swift",
+            "subtitle": "Sharpening our two pointers techniques",
+            "preview": "/static/UnhvFrZ-D.jpg"
+        }
+    ],
+    "posts": [
+        {
+            "id": 1,
+            "widgets": [
+                {
+                    "type": "textField",
+                    "text": "Hallo vrienden, Leo Hier.\nToday we will explore a linked list problem. Linked lists are a very curious data structure because you can have a lot of variants of it. For example you can have a Doubly linked or a singly linked, that means if the nodes of the list have link to next node only or they have a link to the next node and a link to the previous node.\nA lot of computer science problems envolves linked lists, a very common example is pagination. When we deal with pagination a very common implementation is using a doubly linked list, this way you can go forward and backward with ease.\nNo more talking, let's code. But first...",
+                    "alignment": "center"
+                },
+                {
+                    "type": "title",
+                    "text": "The Painting",
+                    "alignment": "leading"
+                },
+                {
+                    "type": "textField",
+                    "text": "The painting is a 1913 art piece called Morning in the Village after Snowstorm from the painter Kazimir Severinovich Malevich. He was a Russian avant-garde artist and art theorist, whose pioneering work and writing had a profound influence on the development of non-objective, or abstract art, in the 20th century.\nI chose this painting because it says a lot about connecting things. It's amazing how the painter can connect geometric forms, in this case he has already assimilated the cubism movement, and make us thinking on abstractions of the reality instead of the reality itself.",
+                    "alignment": "center"
+                },
+                {
+                    "type": "title",
+                    "text": "The problem",
+                    "alignment": "leading"
+                },
+                {
+                    "type": "textField",
+                    "text": "You can check the details in the leetcode problem.\nSo imagine that we have now a linked list and we to rearrange nodes of it. The way we will rearrange is that every node with odd index will be grouped in the left side of the linked list, and the nodes with even index will be grouped in the right side of the linked list.\nThe image below is the example we are trying to achieve.",
+                    "alignment": "center"
+                },
+                {
+                    "type": "image",
+                    "widthPoints": 3,
+                    "heightPoints": 1,
+                    "url": "static/LHdcvHs52.jpg"
+                },
+                {
+                    "type": "title",
+                    "text": "Implementation",
+                    "alignment": "leading"
+                },
+                {
+                    "type": "textField",
+                    "text": "The first thing that pop into my mind is: let's create two pointers, one for the odd linked list and one to the even linked list. After I have those two pointers, I'll traverse the list updating the pointers and in the end I connect the final node of the odd list with the head node of the even list.\nThe implementation will use two pointers, as many of the linked list solutions uses. The knowledge to manipulate pointers is very important when writing algorithms using linked lists. And that's exactly what we are going to do now:",
+                    "alignment": "center"
+                },
+                {
+                    "type": "image",
+                    "widthPoints": 5,
+                    "heightPoints": 4,
+                    "url": "static/dhHiadPds.jpg"
+                },
+                {
+                    "type": "textField",
+                    "text": "Explaining the algorithm:\n\tMark 1 - we create the odd list first element.\n\tMark 2 - we get the next element of the odd list, that can only be an even to be the start of the event list.\n\tMark 3 - we save the head of the even list so we can reference that in the end of the algorithm.\n\tMark 4 - Now we start to traverse the linked list. We will traverse until the point that the even list is not nil, because if it's nil we just will add it in the end anyway and the next of even list is also not nil because if is doesn't worth to change the pointers because we will add it in the end of the algorithm anyway.\n\tMark 5 - Now we will start to update our odd list pointers. The next odd list node should be the next of the current even list. And after that we update the odd list pointer itself to be that node. We do this to continuing traversing the linked list. If we don't update the oddList pointer it will always point to the same node.\n\tMark 6 - Is the exactly the same logic that we did in the Mark 5 but now for the even list. The next of the new oddList should be the next of the current evenList and the evenList itself becomes the updated with it next.\n\tMark 7 - As a final step we connect the last node of the oddList to the head node of the evenList, remember we were updating it on each traverse cycle.\nAnd that's it!",
+                    "alignment": "center"
+                },
+                {
+                    "type": "title",
+                    "text": "Summary",
+                    "alignment": "leading"
+                },
+                {
+                    "type": "textField",
+                    "text": "Today we analysed a very nice algorithm that uses two pointers to reconnect all the linked list nodes in an arbitrary order.\nThat's all my people, I hope you liked as I enjoyed write this article. If you want to support this blog you can Buy Me a Coffee or just leave a comment saying hello. You can also sponsor posts and I'm open to writing freelancing! Just reach me in LinkedIn or Twitter for details.\nThanks for the reading and... That's all folks.",
+                    "alignment": "center"
+                }
+            ]
+        }
+    ]
+}
